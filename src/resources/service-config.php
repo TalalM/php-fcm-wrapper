@@ -30,7 +30,8 @@ return [
     */
 	"services" => [
 		"send",
-        "batch-import"
+        "batch-import",
+        "shorten",
 	],
 
 	/*
