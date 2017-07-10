@@ -65,8 +65,10 @@ class Client {
 	 * @param  array  $attributes
 	 * @return void
 	*/
-	public function __construct($apiKey, array $settings = array()) {
-		$settings["Authorization"] = "key=$apiKey";
+	public function __construct($apiKey = null, array $settings = array()) {
+		if ($apiKey) {
+			$settings["Authorization"] = "key=$apiKey";
+		}
 		$this->settings = $settings;
 	}
 
